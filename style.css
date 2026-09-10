@@ -1,1 +1,68 @@
 /* Add your CSS here */
+/* Intel Color Palette & Base Styles */
+:root {
+  --intel-blue: #e89cc5;
+  --intel-dark-blue: #f3efec;
+  --bg-color: #9beef2;
+  --card-bg: #b4eb99;
+}
+
+/* Timeline Container: Horizontal on large screens, vertical stack on small screens */
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  /* LevelUp: Scroll Snap Effect */
+  scroll-snap-type: x mandatory; 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+}
+
+/* Milestone Card Styling */
+.milestone-card {
+  position: relative;
+  min-width: 280px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* LevelUp: CSS Scroll Snap Alignment */
+  scroll-snap-align: center; 
+  /* LevelUp: CSS Transform Transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* LevelUp: CSS Transform Hover Effect */
+.milestone-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.milestone-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Interactivity: Hide extra details by default, reveal on hover */
+.card-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.milestone-card:hover .card-details {
+  opacity: 1;
+  max-height: 200px;
+}
