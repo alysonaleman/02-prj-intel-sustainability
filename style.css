@@ -1,10 +1,10 @@
 /* Add your CSS here */
 /* Intel Color Palette & Base Styles */
 :root {
-  --intel-blue: #e89cc5;
-  --intel-dark-blue: #f3efec;
-  --bg-color: #9beef2;
-  --card-bg: #b4eb99;
+  --intel-blue: #f08f8e;
+  --intel-dark-blue: #f6aded;
+  --bg-color: #f29bd2;
+  --card-bg: #999ceb;
 }
 
 /* Timeline Container: Horizontal on large screens, vertical stack on small screens */
