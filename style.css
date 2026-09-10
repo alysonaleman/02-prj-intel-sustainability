@@ -5,6 +5,11 @@
   --intel-dark-blue: #f6aded;
   --bg-color: #f29bd2;
   --card-bg: #999ceb;
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+}
 }
 
 /* Timeline Container: Horizontal on large screens, vertical stack on small screens */
